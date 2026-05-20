@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/onedlfsdb  # Database URL
+    username: itteam  # PostgreSQL username
+    password: 123456 # PostgreSQL password
+    driver-class-name: org.postgresql.Driver  # JDBC driver for PostgreSQL
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Automatically update the schema at startup (use 'validate' or 'none' for production)
+    show-sql: true  # Log SQL queries for debugging purposes
+    properties:
+      hibernate:
+        format_sql: true  # Format SQL for readability
+        dialect: org.hibernate.dialect.PostgreSQLDialect  # PostgreSQL dialect for Hibernate
+
+frontend:
+  url: http://103.6.120.246:3030 || http://192.168.1.67:3030 ;  # URL of your frontend (React application)
